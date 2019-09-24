@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Paper Tool</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let search_box = document.getElementById("search");
+            search_box.addEventListener("keyup", function (event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    console.log('hi');
+                    console.log(search_box.value);
+
+
+                    // let xmlHttp = new XMLHttpRequest();
+                    // xmlHttp.
+                    // xmlHttp.onreadystatechange = function () {
+                    //     if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+                    //         callback(xmlHttp.responseText);
+                    //     }
+                    // };
+                    // xmlHttp.open("GET", '/search', true); // true for asynchronous
+                    // xmlHttp.send(search_box.value);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<main>
+    <div class="container">
+        <br><br>
+        <h1 class="header center green-text text-lighten-3">PAPER TOOL</h1>
+        <div class="row center">
+            <h5 class="header col s12 light grey-text text-lighten-1">
+                search for papers by their titles or link their PDFs
+            </h5>
+        </div>
+        <nav>
+            <div class="nav-wrapper green">
+                <form>
+                    <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+</main>
+</body>
+</html>
